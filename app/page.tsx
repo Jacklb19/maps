@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-
 import dynamic from "next/dynamic";
 import { useMemo } from "react";
 
@@ -29,13 +28,18 @@ export default function Home() {
     ],
     []
   );
+  
   return (
     <div className="flex min-h-screen items-center justify-center bg-linear-to-br from-amber-100 to-amber-200 font-sans">
       <main className="w-full max-w-md rounded-3xl bg-white shadow-2xl overflow-hidden">
         
         <div className="relative h-[400px] bg-gray-100 p-4">
           
-          <button className="absolute top-6 left-6 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md hover:bg-gray-50">
+          {/* Botón de back con z-index alto */}
+          <button 
+            className="absolute top-6 left-6 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md hover:bg-gray-50"
+            style={{ zIndex: 1000 }}
+          >
             <svg
               className="h-5 w-5"
               fill="none"
@@ -61,7 +65,11 @@ export default function Home() {
           </div>
 
           
-          <div className="absolute bottom-8 left-6 bg-amber-500 text-white px-6 py-3 rounded-full font-bold text-lg shadow-lg z-10">
+          {/* Badge de kilómetros con z-index alto */}
+          <div 
+            className="absolute bottom-8 left-6 bg-amber-500 text-white px-6 py-3 rounded-full font-bold text-lg shadow-lg"
+            style={{ zIndex: 1000 }}
+          >
             2.03 <span className="text-sm font-normal">Km</span>
           </div>
         </div>
