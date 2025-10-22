@@ -34,13 +34,15 @@ export default function Home() {
   return (
     <div 
       className="flex min-h-screen items-center justify-center font-sans py-6 sm:py-8 md:py-10"
-      style={{ background: 'var(--bg-gradient)' }}
+      style={{ background: 'linear-gradient(to bottom right, var(--bg-secondary), var(--bg-tertiary))' }}
     >
       <main 
         className="w-full max-w-xs sm:max-w-sm md:max-w-md mx-4 rounded-3xl shadow-2xl overflow-hidden"
         style={{ backgroundColor: 'var(--bg-primary)' }}
       >
+        {/* Sección del Mapa */}
         <div className="relative h-[300px] sm:h-[350px] md:h-[400px] p-4 sm:p-5">
+          {/* Botón de retroceso */}
           <button 
             className="absolute top-4 sm:top-7 left-4 sm:left-7 flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-2xl shadow-md hover:shadow-lg transition-all duration-200"
             style={{ 
@@ -54,6 +56,7 @@ export default function Home() {
             />
           </button>
 
+          {/* Mapa */}
           <div className="h-full w-full rounded-2xl overflow-hidden">
             <MapComponent
               center={mapCenter}
@@ -62,6 +65,7 @@ export default function Home() {
             />
           </div>
 
+          {/* Badge de distancia */}
           <div 
             className="absolute bottom-6 sm:bottom-9 left-4 sm:left-7 px-4 py-2 sm:px-6 sm:py-3 rounded-2xl font-bold text-base sm:text-lg shadow-lg"
             style={{ 
@@ -74,7 +78,9 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Sección de Contenido */}
         <div className="p-3 sm:p-4 md:p-5 space-y-3 sm:space-y-4 md:space-y-5">
+          {/* Card de Running */}
           <div 
             className="rounded-3xl p-4 sm:p-5 md:p-6 flex items-center gap-3 sm:gap-4"
             style={{ backgroundColor: 'var(--bg-card-dark)' }}
@@ -116,6 +122,7 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Card de estadísticas "Today" */}
           <div 
             className="rounded-3xl p-4 sm:p-5 md:p-6 shadow-lg"
             style={{ backgroundColor: 'var(--bg-card-light)' }}
@@ -127,6 +134,7 @@ export default function Home() {
               Today
             </h2>
             <div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4">
+              {/* Kilometros */}
               <div 
                 className="rounded-2xl p-2 sm:p-3 text-center"
                 style={{ backgroundColor: 'var(--bg-primary)' }}
@@ -154,6 +162,7 @@ export default function Home() {
                 </p>
               </div>
 
+              {/* Minutos */}
               <div 
                 className="rounded-2xl p-2 sm:p-3 text-center"
                 style={{ backgroundColor: 'var(--bg-primary)' }}
@@ -181,6 +190,7 @@ export default function Home() {
                 </p>
               </div>
 
+              {/* Calorías */}
               <div 
                 className="rounded-2xl p-2 sm:p-3 text-center"
                 style={{ backgroundColor: 'var(--bg-primary)' }}
