@@ -32,12 +32,12 @@ export default function Home() {
   
   return (
     <div className="flex min-h-screen items-center justify-center bg-linear-to-br from-amber-100 to-amber-200 font-sans py-6 sm:py-8 md:py-10">
-      <main className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-4 rounded-3xl bg-white shadow-2xl overflow-hidden">
+      <main className="w-full max-w-xs sm:max-w-sm md:max-w-md mx-4 rounded-3xl bg-white shadow-2xl overflow-hidden">
         
-        <div className="relative h-[300px] sm:h-[350px] md:h-[400px] p-3 sm:p-4">
+        <div className="relative h-[300px] sm:h-[350px] md:h-[400px] p-4 sm:p-5">
           
           <button 
-            className="absolute top-4 sm:top-6 left-4 sm:left-6 flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-2xl bg-white shadow-md hover:bg-gray-50 hover:shadow-lg transition-all duration-200"
+            className="absolute top-4 sm:top-7 left-4 sm:left-7 flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-2xl bg-white shadow-md hover:bg-gray-50 hover:shadow-lg transition-all duration-200"
             style={{ zIndex: 1000 }}
           >
             <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6 text-gray-700" />
@@ -54,7 +54,7 @@ export default function Home() {
 
           
           <div 
-            className="absolute bottom-6 sm:bottom-8 left-4 sm:left-6 bg-amber-500 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-full font-bold text-base sm:text-lg shadow-lg"
+            className="absolute bottom-6 sm:bottom-9 left-4 sm:left-7 bg-amber-500 text-gray-800 px-4 py-2 sm:px-6 sm:py-3 rounded-2xl font-bold text-base sm:text-lg shadow-lg"
             style={{ zIndex: 1000 }}
           >
             2.03 <span className="text-xs sm:text-sm font-normal">Km</span>
@@ -85,30 +85,30 @@ export default function Home() {
             <h2 className="text-xl sm:text-2xl font-semibold text-zinc-900 mb-3 sm:mb-4">Today</h2>
             <div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4">
 
-              <div className="bg-white rounded-2xl p-3 sm:p-4 text-center">
-                <div className="inline-flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-blue-100 mb-2 sm:mb-3">
-                  <TrendingUp className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600" />
+              <div className="bg-white rounded-2xl p-2 sm:p-3 text-center">
+                <div className="inline-flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-blue-100 mb-1 sm:mb-2">
+                  <TrendingUp className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600" />
                 </div>
-                <p className="text-xl sm:text-2xl font-bold text-zinc-900">2.03</p>
-                <p className="text-xs sm:text-sm text-gray-600">Kilometer</p>
+                <p className="text-lg sm:text-xl font-bold text-zinc-900">2.03</p>
+                <p className="text-xs text-gray-600">Kilometer</p>
               </div>
 
               
-              <div className="bg-white rounded-2xl p-3 sm:p-4 text-center">
-                <div className="inline-flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-purple-100 mb-2 sm:mb-3">
-                  <Clock className="h-5 w-5 sm:h-6 sm:w-6 text-purple-600" />
+              <div className="bg-white rounded-2xl p-2 sm:p-3 text-center">
+                <div className="inline-flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-purple-100 mb-1 sm:mb-2">
+                  <Clock className="h-4 w-4 sm:h-5 sm:w-5 text-purple-600" />
                 </div>
-                <p className="text-xl sm:text-2xl font-bold text-zinc-900">15</p>
-                <p className="text-xs sm:text-sm text-gray-600">minutes</p>
+                <p className="text-lg sm:text-xl font-bold text-zinc-900">15</p>
+                <p className="text-xs text-gray-600">minutes</p>
               </div>
 
               
-              <div className="bg-white rounded-2xl p-3 sm:p-4 text-center">
-                <div className="inline-flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-orange-100 mb-2 sm:mb-3">
-                  <Flame className="h-5 w-5 sm:h-6 sm:w-6 text-orange-600" />
+              <div className="bg-white rounded-2xl p-2 sm:p-3 text-center">
+                <div className="inline-flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-orange-100 mb-1 sm:mb-2">
+                  <Flame className="h-4 w-4 sm:h-5 sm:w-5 text-orange-600" />
                 </div>
-                <p className="text-xl sm:text-2xl font-bold text-zinc-900">75</p>
-                <p className="text-xs sm:text-sm text-gray-600">Calories</p>
+                <p className="text-lg sm:text-xl font-bold text-zinc-900">75</p>
+                <p className="text-xs text-gray-600">Calories</p>
               </div>
             </div>
           </div>
