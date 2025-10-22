@@ -33,15 +33,15 @@ export default function Home() {
   
   return (
     <div 
-      className="flex min-h-screen items-center justify-center font-sans py-6 sm:py-8 md:py-10"
+      className="flex h-screen items-center justify-center font-sans overflow-hidden p-4"
       style={{ background: 'linear-gradient(to bottom right, var(--bg-secondary), var(--bg-tertiary))' }}
     >
       <main 
-        className="w-full max-w-xs sm:max-w-sm md:max-w-md mx-4 rounded-3xl shadow-2xl overflow-hidden"
+        className="w-full max-w-xs sm:max-w-sm md:max-w-md h-full flex flex-col rounded-3xl shadow-2xl overflow-hidden"
         style={{ backgroundColor: 'var(--bg-primary)' }}
       >
-        {/* Sección del Mapa */}
-        <div className="relative h-[300px] sm:h-[350px] md:h-[400px] p-4 sm:p-5">
+        {/* Sección del Mapa - Ocupa el espacio disponible */}
+        <div className="relative flex-1 min-h-0 p-4 sm:p-5">
           {/* Botón de retroceso */}
           <button 
             className="absolute top-4 sm:top-7 left-4 sm:left-7 flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-2xl shadow-md hover:shadow-lg transition-all duration-200"
@@ -78,11 +78,11 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Sección de Contenido */}
-        <div className="p-3 sm:p-4 md:p-5 space-y-3 sm:space-y-4 md:space-y-5">
+        {/* Sección de Contenido - Altura fija */}
+        <div className="flex-shrink-0 p-3 sm:p-4 space-y-3 sm:space-y-4">
           {/* Card de Running */}
           <div 
-            className="rounded-3xl p-4 sm:p-5 md:p-6 flex items-center gap-3 sm:gap-4"
+            className="rounded-3xl p-3 sm:p-4 flex items-center gap-3 sm:gap-4"
             style={{ backgroundColor: 'var(--bg-card-dark)' }}
           >
             <div 
@@ -96,19 +96,19 @@ export default function Home() {
             </div>
             <div className="flex-1 min-w-0">
               <h3 
-                className="font-semibold text-base sm:text-lg"
+                className="font-semibold text-sm sm:text-base"
                 style={{ color: 'var(--text-inverse)' }}
               >
                 Running
               </h3>
               <p 
-                className="text-xs sm:text-sm"
+                className="text-xs"
                 style={{ color: 'var(--text-tertiary)' }}
               >
                 3000 meters per day
               </p>
               <div 
-                className="mt-2 h-1.5 rounded-full overflow-hidden"
+                className="mt-1.5 h-1.5 rounded-full overflow-hidden"
                 style={{ backgroundColor: 'rgba(0, 0, 0, 0.3)' }}
               >
                 <div
@@ -124,38 +124,38 @@ export default function Home() {
 
           {/* Card de estadísticas "Today" */}
           <div 
-            className="rounded-3xl p-4 sm:p-5 md:p-6 shadow-lg"
+            className="rounded-3xl p-3 sm:p-4 shadow-lg"
             style={{ backgroundColor: 'var(--bg-card-light)' }}
           >
             <h2 
-              className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4"
+              className="text-base sm:text-lg font-semibold mb-2 sm:mb-3"
               style={{ color: 'var(--text-primary)' }}
             >
               Today
             </h2>
-            <div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4">
+            <div className="grid grid-cols-3 gap-2">
               {/* Kilometros */}
               <div 
-                className="rounded-2xl p-2 sm:p-3 text-center"
+                className="rounded-2xl p-2 text-center"
                 style={{ backgroundColor: 'var(--bg-primary)' }}
               >
                 <div 
-                  className="inline-flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full mb-1 sm:mb-2"
+                  className="inline-flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full mb-1"
                   style={{ backgroundColor: 'var(--icon-bg-blue)' }}
                 >
                   <TrendingUp 
-                    className="h-4 w-4 sm:h-5 sm:w-5" 
+                    className="h-3 w-3 sm:h-4 sm:w-4" 
                     style={{ color: 'var(--icon-text-blue)' }}
                   />
                 </div>
                 <p 
-                  className="text-lg sm:text-xl font-bold"
+                  className="text-base sm:text-lg font-bold"
                   style={{ color: 'var(--text-primary)' }}
                 >
                   2.03
                 </p>
                 <p 
-                  className="text-xs"
+                  className="text-[10px] sm:text-xs"
                   style={{ color: 'var(--text-secondary)' }}
                 >
                   Kilometer
@@ -164,26 +164,26 @@ export default function Home() {
 
               {/* Minutos */}
               <div 
-                className="rounded-2xl p-2 sm:p-3 text-center"
+                className="rounded-2xl p-2 text-center"
                 style={{ backgroundColor: 'var(--bg-primary)' }}
               >
                 <div 
-                  className="inline-flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full mb-1 sm:mb-2"
+                  className="inline-flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full mb-1"
                   style={{ backgroundColor: 'var(--icon-bg-purple)' }}
                 >
                   <Clock 
-                    className="h-4 w-4 sm:h-5 sm:w-5" 
+                    className="h-3 w-3 sm:h-4 sm:w-4" 
                     style={{ color: 'var(--icon-text-purple)' }}
                   />
                 </div>
                 <p 
-                  className="text-lg sm:text-xl font-bold"
+                  className="text-base sm:text-lg font-bold"
                   style={{ color: 'var(--text-primary)' }}
                 >
                   15
                 </p>
                 <p 
-                  className="text-xs"
+                  className="text-[10px] sm:text-xs"
                   style={{ color: 'var(--text-secondary)' }}
                 >
                   minutes
@@ -192,26 +192,26 @@ export default function Home() {
 
               {/* Calorías */}
               <div 
-                className="rounded-2xl p-2 sm:p-3 text-center"
+                className="rounded-2xl p-2 text-center"
                 style={{ backgroundColor: 'var(--bg-primary)' }}
               >
                 <div 
-                  className="inline-flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full mb-1 sm:mb-2"
+                  className="inline-flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full mb-1"
                   style={{ backgroundColor: 'var(--icon-bg-orange)' }}
                 >
                   <Flame 
-                    className="h-4 w-4 sm:h-5 sm:w-5" 
+                    className="h-3 w-3 sm:h-4 sm:w-4" 
                     style={{ color: 'var(--icon-text-orange)' }}
                   />
                 </div>
                 <p 
-                  className="text-lg sm:text-xl font-bold"
+                  className="text-base sm:text-lg font-bold"
                   style={{ color: 'var(--text-primary)' }}
                 >
                   75
                 </p>
                 <p 
-                  className="text-xs"
+                  className="text-[10px] sm:text-xs"
                   style={{ color: 'var(--text-secondary)' }}
                 >
                   Calories
