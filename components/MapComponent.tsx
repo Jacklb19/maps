@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { MapContainer, TileLayer, Polyline, Marker } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
@@ -18,6 +19,16 @@ interface MapComponentProps {
 }
 
 export default function MapComponent({ center, zoom, route }: MapComponentProps) {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null;
+  }
+
   return (
     <MapContainer
       center={center}
@@ -30,7 +41,6 @@ export default function MapComponent({ center, zoom, route }: MapComponentProps)
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
         url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
       />
-    
       <Polyline
         positions={route}
         pathOptions={{
@@ -41,10 +51,7 @@ export default function MapComponent({ center, zoom, route }: MapComponentProps)
           lineJoin: "round",
         }}
       />
-      
-      {route.length > 0 && (
-        <Marker position={route[0]} />
-      )}
+      {route.length > 0 && <Marker position={route[0]} />}
     </MapContainer>
   );
 }
